@@ -1,0 +1,50 @@
+.wrapper {
+  background: #030304;
+  height: max-content;
+  position: relative;
+  &-dron {
+    position: absolute;
+    width: 100%;
+    background-image: url("../images/dronBG.png");
+    top: 0;
+    left: 0;
+  }
+  &_header {
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    background-color: rgb(67, 67, 67);
+    z-index: 3;
+    &-row {
+      padding: 15px 5%;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      max-width: 1200px;
+  margin: 0 auto;
+  // width: 100%;
+      &_logo {
+        height: 40px;
+        grid-column: 1;
+      }
+      &_navigation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-column: 2;
+        gap: 30px;
+        &-item {
+          color: white;
+          cursor: pointer;
+          &.active{
+            color: gray;
+
+          }
+        }
+      }
+      &_text {
+       height: 40px;
+       grid-column: 3;
+      }
+    }
+  }
+}

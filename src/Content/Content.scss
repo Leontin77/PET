@@ -1,0 +1,60 @@
+.contentWrapper {
+  // z-index: 1;
+  position: relative;
+  padding-top: 100px;
+  // width: 100%;
+  padding: 100px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: max-content;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  &_imageWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-mainImg {
+      width: 100%;
+    }
+  }
+  &_name {
+    margin-top: 15px;
+    color: #9cc31d;
+    font-family: Raleway;
+    font-size: 45px;
+    font-weight: 400;
+  }
+  &_mainInfoBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    height: 100%;
+    margin-top: 20px;
+
+    &-item {
+      display: flex;
+      align-items: start; // center content if that's what you want
+      width: 45%;
+    }
+
+    &-divider{
+      width: 2px;
+      background: #9CC31D;
+      align-self: stretch; // make this element stretch full height of the flex container
+    }
+  }
+  &_tacticTitle{
+    color: white;
+    font-family: Karantina;
+    font-size: 35px;
+    font-weight: 700;
+    margin: 40px 0;
+
+  }
+}
