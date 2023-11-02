@@ -2,7 +2,6 @@ import "./Content.scss";
 import dron1main from "../images/dron1main.png";
 import dron2main from "../images/dron2main.png";
 import infoEnum from "./info.enum";
-import { useMemo } from "react";
 
 interface ContentProps {
   tab: number;
@@ -17,7 +16,7 @@ export const Content = ({ tab }: ContentProps): JSX.Element => {
       <div className="contentWrapper_imageWrapper">
         <img
           className="contentWrapper_imageWrapper-mainImg"
-          src={tab === 1 ? dron1main : dron2main}
+          src={tab === 8 ? dron1main : dron2main}
           alt=""
         />
       </div>
