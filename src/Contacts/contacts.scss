@@ -66,7 +66,8 @@
 }
 
 .aboutUs{
-  width: 100%;
+  width: 45%;
+  height: auto;
   padding: 35px;
   background: rgba(255, 255, 255, .2);
   border-radius: 5px;
@@ -77,6 +78,7 @@
   &-title{
     font-size: 25px;
     font-weight: bold;
+    text-align: center;
   }
   &-content{
     width: 100%;
@@ -102,3 +104,29 @@
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .formsInputs-name{
+    flex-direction: column;
+    width: 100%;
+    &-input{
+      max-width: 590px;
+      width: 100%;
+    }
+  }
+  .aboutUs{
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .contactsWrapper-content{
+    flex-direction: column;
+  }
+  .formsInputs{
+    width: auto;
+  }
+  .aboutUs{
+    width: auto;
+    height: 400px;
+  }
+}
