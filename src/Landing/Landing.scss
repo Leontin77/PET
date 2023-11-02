@@ -50,3 +50,30 @@
     }
   }
 }
+
+
+
+.wrapper_header-row_navigation-item {
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.wrapper_header-row_navigation-item:hover {
+  color: gray; /* or any other color you prefer for the active/hover state */
+  transform: translateY(-2px); /* gives a slight upward lift */
+}
+
+@media (max-width: 1024px) {
+  .wrapper_header-row{
+    padding: 20px 5%;
+    grid-template-columns: auto auto;
+    &_logo{
+      height: 30px;
+    }
+    &_navigation{
+      gap: 10px;
+      font-size: 15px;
+    }
+  }
+}

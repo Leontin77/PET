@@ -1,6 +1,6 @@
 import "./contacts.scss";
 import { useState } from "react";
-
+import emailjs from 'emailjs-com';
 export const Contacts = () => {
 
   const [name, setName] = useState('')
@@ -10,8 +10,10 @@ export const Contacts = () => {
   const [request, setRequest] = useState('')
 
   const [data, setData] = useState({})
+  emailjs.init('5hEPvDX5N2RgGy0np');
 
-  const onSubmit = () => {
+  const onSubmit = (e: any) => {
+    e.preventDefault
     setData({
       Name: name,
       Surname: surame,
@@ -19,6 +21,22 @@ export const Contacts = () => {
       Tel: tel,
       Request: request
     })
+    const templateParams = {
+      name: name,
+      surname: surame,
+      email: email,
+      tel: tel,
+      request: request,
+    };
+  
+    emailjs.send("service_1ivsytk","template_qulgh5n", templateParams)
+      .then((response) => {
+        console.log('Email sent successfully', response);
+      })
+      .catch((error) => {
+        console.error('Error sending email:', error);
+      });
+
   }
 
   console.log('data', data);
@@ -44,7 +62,7 @@ export const Contacts = () => {
           <input className="formsInputs-info" type="text" onChange={(e: any) => setTel(e.target.value)}/>
           <div className="description">Запит</div>
           <input className="formsInputs-info" type="text" onChange={(e: any) => setRequest(e.target.value)}/>
-          <button type='button' className="formsInputs-button" onClick={onSubmit}>Відправити</button>
+          <button type='button' className="formsInputs-button" onClick={(e: any) => onSubmit(e)}>Відправити</button>
         </form>
         <div className="aboutUs">
           <div className="aboutUs-title"> ТОВ "ПАУЄР ЕЙТ ТЕХНОЛОДЖИЗ" </div>

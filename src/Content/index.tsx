@@ -28,7 +28,7 @@ export const Content = ({ tab }: ContentProps): JSX.Element => {
         )}
         <div className="contentWrapper_mainInfoBox-item">{infoEnum[`FPV${tab}`].rightText}</div>
       </div>
-      <div className="contentWrapper_tacticTitle">ТАКТИКО-ТЕХНІЧНІ ХАРАКТЕРИСТИКИ</div>
+      <div className="contentWrapper_tacticTitle">ТАКТИКО - ТЕХНІЧНІ ХАРАКТЕРИСТИКИ</div>
       <div className="specifications-container">
       {Object.entries(infoEnum[`FPV${tab}`].detailes).map(([key, value]) => (
         <div key={key} className="specification">

@@ -11,6 +11,7 @@ export interface ILandingProps {}
 export const Landing = ({ ...props }: ILandingProps): JSX.Element => {
 
   const [tab, setTab] = useState<number>(8)
+  const width = window.innerWidth;
 
   return (
     <div className="wrapper">
@@ -26,7 +27,7 @@ export const Landing = ({ ...props }: ILandingProps): JSX.Element => {
             <div className={`wrapper_header-row_navigation-item ${tab === 12 && 'active'}`} onClick={() => setTab(12)}>КОНТАКТИ</div>
 
           </div>
-          <img className="wrapper_header-row_text" src={headerText} />
+          {width > 1024 && <img className="wrapper_header-row_text" src={headerText} />}
 
         </div>
       </div>
