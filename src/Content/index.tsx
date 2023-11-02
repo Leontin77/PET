@@ -2,6 +2,7 @@ import "./Content.scss";
 import dron1main from "../images/dron1main.png";
 import dron2main from "../images/dron2main.png";
 import infoEnum from "./info.enum";
+import { useEffect, useState } from "react";
 
 interface ContentProps {
   tab: number;
@@ -9,7 +10,11 @@ interface ContentProps {
 
 export const Content = ({ tab }: ContentProps): JSX.Element => {
   console.log(tab);
-  const width = window.innerWidth;
+  const [width, setWidth] = useState(window.innerWidth)
+
+  useEffect(() => {
+    setWidth(window.innerWidth)
+  }, [window.innerWidth])
 
   return (
     <div className="contentWrapper">

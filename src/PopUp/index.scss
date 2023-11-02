@@ -1,0 +1,32 @@
+.popUp{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &_content{
+        width: 70%;
+        height: 30%;
+        background: rgb(68, 68, 68);
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Montserrat;
+        font-size: 25px;
+        padding: 20px;
+        text-align: center;
+        position: relative;
+        color: white;
+        &-svg{
+            position: absolute;
+            top: 5px;
+            right: 5px;
+
+        }
+    }
+}

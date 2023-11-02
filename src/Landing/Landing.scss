@@ -5,9 +5,14 @@
   &-dron {
     position: absolute;
     width: 100%;
-    background-image: url("../images/dronBG.png");
-    top: 0;
-    left: 0;
+    height: 100%;
+    background-size: contain;
+    right: 0;
+    bottom: 0;
+    background-position-x: right;
+    &.noRepeat{
+      background-repeat-x: no-repeat;
+    }
   }
   &_header {
     height: 70px;
@@ -23,6 +28,7 @@
   margin: 0 auto;
   // width: 100%;
       &_logo {
+       
         height: 40px;
         grid-column: 1;
       }

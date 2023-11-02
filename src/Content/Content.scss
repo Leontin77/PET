@@ -3,7 +3,7 @@
   position: relative;
   padding-top: 100px;
   // width: 100%;
-  padding: 100px 5%;
+  padding: 100px 5% 0;
   max-width: 1200px;
   margin: 0 auto;
   height: max-content;
@@ -69,7 +69,7 @@
   width: 50%;
   box-sizing: border-box;
   // padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #fff;
   color: white;
   display: flex;
   justify-content: center;
@@ -91,7 +91,7 @@
   align-items: center;
   justify-content: start;
   padding: 0 5%;
-  border-right: 1px solid #ccc;
+  border-right: 1px solid #fff;
 
 }
 
