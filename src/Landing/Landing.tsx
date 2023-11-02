@@ -5,6 +5,7 @@ import headerText from "../images/headerText.png"
 import { useState } from "react";
 import { Content } from "Content";
 import { Details } from "DetaIls";
+import { Contacts } from "Contacts";
 export interface ILandingProps {}
 
 export const Landing = ({ ...props }: ILandingProps): JSX.Element => {
@@ -29,8 +30,12 @@ export const Landing = ({ ...props }: ILandingProps): JSX.Element => {
 
         </div>
       </div>
-      <Content tab={tab}/>
-      <Details tab={tab}/>
+      {tab === 8 || tab === 10 ? 
+      <>
+        <Content tab={tab}/>
+        <Details tab={tab}/>
+      </>
+      : <Contacts/>}
     </div>
   );
 };
