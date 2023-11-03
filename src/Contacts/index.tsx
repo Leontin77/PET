@@ -2,6 +2,7 @@ import "./contacts.scss";
 import { useEffect, useState } from "react";
 import emailjs from 'emailjs-com';
 import { PopUp } from "PopUp";
+import insta from "../images/insta.png"
 export const Contacts = () => {
 
   const [name, setName] = useState('')
@@ -80,24 +81,31 @@ export const Contacts = () => {
           <button type='submit' className="formsInputs-button" onClick={(e: any) => onSubmit(e)}>Відправити</button>
         </form>
         <div className="aboutUs">
-          <div className="aboutUs-title"> ТОВ "ПАУЄР ЕЙТ ТЕХНОЛОДЖИЗ" </div>
+          <div className="aboutUs-title"> ТОВ "ПАУЕР ЕЙТ ТЕХНОЛОДЖИЗ" </div>
           <div className="aboutUs-content">
-            <div className="aboutUs-content__title">Передзвони нам</div>
-            <div className="aboutUs-content__description">
-              +38-(066)-090-14-12 Акопянц Ольга
-            </div>
+            <div className="aboutUs-content__title">Відділ продажу:</div>
+            <a href="tel:+38-066-090-14-12" className="aboutUs-content__description">
+              +38-(066)-090-14-12
+            </a>
           </div>
           <div className="aboutUs-content">
             <div className="aboutUs-content__title">Адреса</div>
             <div className="aboutUs-content__description">
-              вул. Сімʼї Бродських 31-33, корпус 3, Київ, Україна, 03057
+              Київ, Україна
             </div>
           </div>
           <div className="aboutUs-content">
-            <div className="aboutUs-content__title">Наш веб-сайт</div>
-            <div className="aboutUs-content__description">
-              p8t.com.ua
-            </div>
+            <div className="aboutUs-content__title">Наша пошта</div>
+            <a href="mailto:info@p8tech.com.ua" className="aboutUs-content__description">
+              info@p8tech.com.ua
+            </a>
+          </div>
+          <div className="aboutUs-content">
+            <div className="aboutUs-content__title">Instagram</div>
+            <a href="http://instagram.com/_u/p8tech" className="aboutUs-content__description">
+            <img className="insta" src={insta} alt="" />
+              p8tech
+            </a>
           </div>
         </div>
       </div>
